@@ -1,0 +1,14 @@
+<template data="{{item}}" name="pit-1">
+  <view class="pit-1">
+    <navigator open-type="navigate" url="{{'/pages/goods-info/goods-info?itemId='+item.itemId}}">
+      <image class="pit-1-image" src="{{item.picUrl}}" />
+    </navigator>
+    <navigator open-type="navigate" url="{{'/pages/goods-info/goods-info?itemId='+item.itemId}}">
+      <view class="pit-1-title">{{item.title}}</view>
+    </navigator>
+    <view class="pit-1-subtitle">{{item.subtitle}}</view>
+    <view class="pit-1-info">{{item.itemSkuVOs[0].saleDetailInfo}}</view>
+    <view class="pit-1-price">¥{{item.itemSkuVOs[0].discountPriceYuanString}}</view>
+    <view class="pit-1-cart" data-itemid="{{item.itemId}}" data-skuid="{{item.itemSkuVOs[0].skuId}}" bindtap="addPit1ToCart"/>
+  </view>
+</template>

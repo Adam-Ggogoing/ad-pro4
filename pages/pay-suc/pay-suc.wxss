@@ -1,0 +1,46 @@
+.header{
+  background-color:#fff;
+  text-align: center;
+  height:84rpx;
+  line-height: 84rpx;
+}
+.header image{
+  width:42rpx;
+  height:42rpx;
+  vertical-align: middle;
+}
+.header text{
+  font-size:28rpx;
+  margin:0 14rpx;
+  color:#78b25d;
+}
+.body{
+  background-color: #fff;
+  margin-top:28rpx;
+}
+.line{
+  padding:0;
+  font-size:28rpx;
+  width:650rpx;
+  margin: 0 auto;
+  line-height:84rpx;
+}
+.line .price{
+  margin-right:5rpx;
+  color:#78b25d;
+} 
+.foot{
+  margin-top:35rpx;
+}
+.foot text{
+  display: block;
+  line-height: 84rpx;
+  text-align:center;
+  color:#000;
+  background-color:#fff;
+  text-decoration:none;
+  margin:25rpx auto;
+  width:700rpx;
+  border-radius:20rpx;
+  font-size:28rpx;
+}

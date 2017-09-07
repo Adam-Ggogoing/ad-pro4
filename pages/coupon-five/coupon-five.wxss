@@ -1,0 +1,6 @@
+.coupon image{
+  display: block;
+}
+.container{
+  background-color: #000;
+}

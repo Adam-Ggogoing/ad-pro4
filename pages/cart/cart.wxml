@@ -1,0 +1,74 @@
+<!--cart.wxml-->
+<view class="container">
+  <view class="empty" style="display:{{list.length===0&&invalid.length===0?'block':'none'}}">
+    <view class="empty-img"/>
+    <a class="empty-goshop" bindtap="gotoHome">去逛逛</a>
+  </view>
+  <view class="cart" >
+    <view wx:if="{{goodsData.discountInfo.discountDesc?true:false}}" class="topfixed"> <text class="topfixed-icon">特惠专场</text> {{goodsData.discountInfo.discountDesc}}</view>
+    <view wx:if="{{goodsData.discountInfo.discountDesc?true:false}}" style="width:100%;height:96rpx;"></view>
+    <view 
+      style="display:{{list.length!==0?'block':'none'}}"
+      class="cart-goods" 
+      wx:key="id"
+      wx:for="{{list}}"
+      wx:for-item="item"
+    >
+      <view class="{{item.selected?'cart-goods-icon':'cart-goods-icon cart-goods-icon-un'}}" id="{{item.id}}" bindtap="select"></view>
+      <image class="cart-goods-img" src="{{item.itemIconUrl}}"></image>
+      <view wx:if="{{item.tagdetail.specialTag&&item.tagdetail.tagContent?true:false}}" class="cart-goods-tags">{{item.tagdetail.tagContent}}</view>
+      <view class="cart-goods-title">{{item.itemName}}</view>
+      <text class="cart-goods-spec">规格：{{item.skuInfo.spec}}</text>
+      <view class="cart-goods-del" id="{{item.id}}" bindtap="del">X</view>
+      <view class="cart-goods-price">
+        <text class="cart-goods-origin">¥{{item.itemEffePrice}}</text>
+        <view class="cart-goods-count">
+          <text id="{{item.id}}" class="cart-goods-operation" bindtap="changeCountL">-</text>
+          <text class="cart-goods-num">{{item.itemCount}}</text>
+          <text id="{{item.id}}" class="cart-goods-operation" bindtap="changeCountR">+</text>
+        </view>
+      </view> 
+    </view>
+    <view wx:if="{{invalid.length>0?true:false}}" style="background:#fff;padding-bottom:2rpx;"> 
+      <view class="goods-invalid-text">因配送范围、库存原因导致失效的商品</view>
+      <view class="goods-invalid-container">
+        <view class="modal"></view>
+        <view 
+          class="goods-invalid" 
+          wx:key="id"
+          wx:for="{{invalid}}"
+          wx:for-item="item"
+        >
+          <view class="{{item.invalid?'goods-invalid-cover':''}}"></view>
+          <image class="cart-goods-img" src="{{item.itemIconUrl}}"></image>
+          <view class="cart-goods-title">{{item.itemName}}</view>
+          <text class="cart-goods-spec">规格：{{item.skuInfo.spec}}</text>
+          <view class="cart-goods-price">
+            <text class="cart-goods-origin">¥{{item.itemEffePrice}}</text>
+            <view class="cart-goods-count">
+              <text class="cart-goods-num">数量：{{item.itemCount}}</text>
+            </view>
+          </view> 
+        </view>
+      </view>
+      <button class="incalid-btn" bindtap="clearInvalidGoods">清除全部失效商品</button>
+    </view>
+    <view 
+      class="cart-bottom-wrap" 
+      style="display:{{list.length!==0?'block':'none'}}"
+    >
+      <view class="cart-bottom-place"></view>
+      <view class="cart-freight">
+        <text>{{goodsData.freightDesc}}</text>
+        <a bindtap="gotoHome">去凑单 ></a>
+      </view>
+      <view class="cart-bottom">
+        <a class="{{allSelected?'cart-whole':'cart-whole cart-whole-unSelect'}}" bindtap="allSelect"/>
+        <text class="cart-whole-text">全选</text>
+        <text class="cart-total">{{goodsData.discountInfo.currPrice}}</text>
+        <a class="cart-account" bindtap="gotoPayoff">去结算</a>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="bottom-border" />

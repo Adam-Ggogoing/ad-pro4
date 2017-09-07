@@ -1,0 +1,22 @@
+<import src="../../component/pit-1/pit-1.wxml" />
+
+<view class="container">
+  <view class="header">
+    <input value="{{keyword}}" bindconfirm="inputSearch" auto-focus class="header-input" type="text" placeholder="搜索速懒鲜生商品"/>
+    <icon class="header-icon" type="search" size="24"/>
+    <navigator open-type="reLaunch" url="/pages/cart/cart">
+      <view class="header-cart">
+        <text wx:if="{{count}}">{{count}}</text>
+      </view>
+    </navigator>
+  </view>
+  <view class="header-place" />
+  <view wx:if="{{items!==null}}" class="body">
+    <template is="pit-1" wx:key="{{item}}" wx:for="{{items}}" wx:for-item="item" data="{{item}}" />
+  </view>
+  <view wx:if="{{items===null}}" class="body-empty">
+    <text>搜不到</text>
+    <text class="body-empty-keyword">{{keyword}}</text>
+    <text>商品</text>
+  </view>
+</view>

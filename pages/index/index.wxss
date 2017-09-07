@@ -1,0 +1,44 @@
+@import "../../component/floors/floors.wxss";
+
+.container{
+  width:750rpx;
+  font-family: SimSun,Microsoft YaHei,self-Serif;
+  background-color:#ececec; 
+  overflow: scroll;
+}
+.container-act{
+  background: #fff;
+}
+.searchBox{
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 110rpx;
+  background: #fff;
+  background-size: 100%;
+  padding-top: 20rpx;
+  z-index: 998;
+}
+.search{
+  box-sizing: border-box;
+  height:70rpx;
+  line-height:75rpx;
+  border-radius:10rpx;
+  background:#f5f4f4;
+  margin-left: 196rpx;
+  padding-left: 75rpx;
+  padding-right: 16rpx;
+  margin:0 20rpx;
+}
+.search-icon{
+  position: absolute;
+  top:30rpx;
+  left:30rpx;
+  z-index: 999
+}
+.search::after{
+  height: 110rpx;
+  width: 100%;
+}

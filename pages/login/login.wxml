@@ -1,0 +1,18 @@
+<view class="login">
+  <image
+    class="login_img"
+    src="http://h5.xianzaishi.com//upload_8490743623c2299781f68e408ab7adde.jpg"
+  />
+  <view class="login_line">
+    <text class="login_text">手机号</text>
+    <input bindinput="phoneInput" class="login_input" placeholder="请输入手机号" type="number" auto-focus/>
+    <button hidden="{{passwordLogin}}" class="button--code" bindtap="getCode">{{codeMsg}}</button>
+  </view>
+  <view class="login_line">
+    <text class="login_text">{{passwordLogin?'密码登陆':'验证码'}}</text>
+    <input bindinput="codeInput" class="login_input" placeholder="{{passwordLogin?'请输入密码':'请输入验证码'}}" password="{{passwordLogin?true:false}}" type="{{passwordLogin?'text':'number'}}"/>
+    <button  hidden="{{!passwordLogin}}" style="color:#a4a4a4" class="button--code" bindtap="forgot">忘记密码</button>
+  </view>
+  <button class="button--submit" bindtap="submit">登录</button>
+  <button class="btn-text" bindtap="turnLogin">{{passwordLogin?'通过短信验证码登陆':'通过密码登陆'}}</button>
+</view>

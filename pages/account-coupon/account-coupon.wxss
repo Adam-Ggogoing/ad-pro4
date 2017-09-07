@@ -1,0 +1,47 @@
+.empty{
+  width:558rpx;
+  height:470rpx;
+  background-image:url(http://h5.xianzaishi.com//upload_e880bceb6abfcf86c26b23bef050e007.jpg);
+  background-size:cover;
+  margin:100rpx auto;
+}
+.coupon{
+  width:690rpx;
+  height:290rpx;
+  background-image:url(https://h5.xianzaishi.com//upload_97d2ccd6d4d1fab1374df438fbd95989.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  margin:30rpx auto 0; 
+}
+.coupon-body{
+  height:200rpx;
+}
+.coupon-price{
+  display: block;
+  font-size:60rpx;
+  color:#fff;
+  height:140rpx;
+  line-height:200rpx;
+  text-indent:200rpx;
+}
+.coupon-desc{
+  display: block;
+  height:50rpx;
+  line-height:50rpx;
+  text-indent:200rpx;
+  font-size:25rpx;
+  color:#2f5518;
+}
+.coupon-footer{
+  height:90rpx;
+  line-height:90rpx;
+  font-size:26rpx;
+  padding:0 20rpx;
+  color:#2f5518;
+  position:relative;
+}
+.coupon-status{
+  position:absolute;
+  right:20rpx;
+}

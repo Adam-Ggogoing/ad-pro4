@@ -1,0 +1,42 @@
+.container{
+  background-color:#eee;
+}
+.address-div{
+  margin-top:10rpx;
+  background-color: #fff;
+}
+.address-p{
+  border-bottom:1rpx solid #eee;
+  padding-left:20rpx;
+  font-size:28rpx;
+  line-height:90rpx;
+}
+.address-label{
+  display: inline-block;
+  vertical-align: middle;
+  width:150rpx;
+}
+.address-input{
+  display: inline-block;
+  vertical-align: middle;
+  width:500rpx;
+}
+.address-input text{
+  vertical-align: middle;
+}
+.address-input icon{
+  vertical-align: middle;
+  height:50rpx;
+  margin-left:20rpx;
+  margin-right:50rpx;
+}
+.address-button{
+  width:700rpx;
+  margin:25rpx auto 0;
+}
+.address-code{
+  color:#777;
+}
+.address-button-del{
+  
+}

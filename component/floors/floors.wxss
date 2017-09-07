@@ -1,0 +1,210 @@
+.day-deals{
+  box-sizing: border-box;
+  width:100%;
+  padding:0 20rpx 10rpx;
+  background: #fff;
+  font-size: 26rpx;
+  position: relative;
+  margin: auto;
+  color: #fff;
+  margin-top:20rpx;
+}
+.deals-img{
+  width:100%;
+  height:90rpx;
+}
+.deals-text{
+  position: absolute;
+  left:179rpx;
+  top:28rpx;
+  font-size: 32rpx;
+  color: #0c0c0c;
+}
+.deals-box{
+  width:46rpx;
+  height:46rpx;
+  background: #0c0c0c;
+  text-align: center;
+  line-height: 46rpx;
+}
+.deals-hours{
+  position: absolute;
+  left:327rpx;
+  top:23rpx;
+  border-radius:6rpx;
+}
+.deals-minutes{
+  position: absolute;
+  left:402rpx;
+  top:23rpx;
+  border-radius:6rpx;
+}
+.deals-seconds{
+  position: absolute;
+  left:477rpx;
+  top:23rpx;
+  border-radius:6rpx;
+  background: #76b357;
+}
+.deals-hours-point{
+  color:#0c0c0c;
+  position: absolute;
+  left:381rpx;
+  top:28rpx;
+}
+.deals-minutes-point{
+  color:#0c0c0c;
+  position: absolute;
+  left:457rpx;
+  top:28rpx;
+}
+.level-1 image{
+  width:100%;
+  display: block;
+}
+.level-4 image{
+  width:100%;
+}
+.level-title{
+  width:100%;
+  padding: 20rpx;
+  text-align: center;
+  font-size: 28rpx;
+  box-sizing:border-box;
+}
+.level-2{
+  background: #fff;
+  width: 100%;
+  padding-top:1px;
+}
+.goods-item{
+  width:690rpx;
+  margin: auto;
+  position: relative;
+}
+.single-img{
+  width:316rpx;
+  height:316rpx;
+}
+.single-title{
+  width:380rpx;
+  display: inline-block;
+  font-size: 34rpx;
+  color: #494949;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  left:316rpx;
+  top:72rpx;
+}
+.single-subTitle{
+  font-size: 28rpx;
+  color:#b3b2b2;
+  position: absolute;
+  left:316rpx;
+  top:136rpx;
+}
+.single-origin-price{
+  font-size: 26rpx;
+  color:#b3b2b2;
+  text-decoration: line-through;
+  position: absolute;
+  left:316rpx;
+  top:190rpx;
+}
+.single-price{
+  font-size: 28rpx;
+  position: absolute;
+  left:316rpx;
+  top:236rpx;
+  color:#ff4400;
+}
+.single-cart{
+  width:65rpx;
+  height:65rpx;
+  font-size: 28rpx;
+  color:#b3b2b2;
+  position: absolute;
+  right:0;
+  top:190rpx;
+  background-image: url('http://h5.xianzaishi.com//upload_cb0e70b4983fa85bfc4db67fec960a67.png');
+  background-repeat:no-repeat;
+  background-size:100%; 
+}
+.single-cart-saleout{
+  background-image: url('http://h5.xianzaishi.com//upload_d6cafe95bd3fa60483cc22a0a1394f97.png');
+}
+.slide-image{
+  width:100%;
+  height:300rpx;
+}
+.headSpace{
+  margin-top: 10rpx;
+}
+.level-3{
+  width:100%;
+}
+
+.goods-levelA{
+  box-sizing: border-box;
+  width:345rpx;
+  height:510rpx;
+  background-color: #fff;
+  padding:15rpx 22rpx 0;
+  margin:20rpx 0 0 20rpx;
+  display: inline-block;
+  vertical-align: top;
+  border-radius:12rpx;
+}
+.levelA-img{
+  width:290rpx;
+  height:250rpx;
+}
+.levelA-content{
+  width:244rpx;
+  height:230rpx;
+  margin:auto;
+  position:relative;
+}
+.levelA-title{
+  font-size: 26rpx;
+  color: #5b5b5b;
+  line-height:36rpx;
+  height:72rpx;
+  overflow: hidden;
+}
+.price-count{
+  position: absolute;
+  left:0;
+  bottom:114rpx;
+  white-space:nowrap;
+  overflow:hidden;
+}
+.levelA-price{
+  color: #ff4400;
+  font-size: 28rpx;
+}
+.levelA-count{
+  color: #939392;
+  font-size: 28rpx;
+}
+.levelA-cart{
+  color: #fff;
+  font-size: 26rpx;
+  background-color: #76b357;
+  width:242rpx;
+  height:72rpx;
+  text-align: center;
+  line-height: 72rpx;
+  border-radius: 42rpx;
+  position: absolute;
+  left:0;
+  bottom:26rpx;
+}
+.levelA-cart-saleout{
+  background-color: #c0c2bf;
+}
+.swiper{
+  height:300rpx;
+}

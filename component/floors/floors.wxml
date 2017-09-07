@@ -1,0 +1,85 @@
+<template name="t-floor">
+  <view 
+    wx:for="{{list}}"
+    wx:for-item="item"
+    wx:key="id"
+  >
+    <view id="{{item.picList[0].targetId}}" wx:if="{{item.stepType==12}}" class="{{item.headSpace?'level-1 headSpace':'level-1'}}" bindtap="bindViewTap">
+      <image src="{{item.picList[0].picUrl}}" mode="widthFix"></image>
+    </view>
+    <view wx:if="{{item.stepType==15}}" class="{{item.headSpace?'level-2 headSpace':'level-2'}}">
+      <view class="day-deals">
+        <image src="http://h5.xianzaishi.com//upload_f798b428605c95f3222fc4667da06502.jpg" class="deals-img"></image>
+        <text class="deals-text">今日特价</text>
+        <text class="deals-box deals-hours">{{item.time&&item.time.hours}}</text> 
+        <text class="deals-hours-point">:</text>
+        <text class="deals-box deals-minutes">{{item.time&&item.time.minutes}}</text> 
+        <text class="deals-minutes-point">:</text>
+        <text class="deals-box deals-seconds">{{item.time&&item.time.seconds}}</text> 
+      </view>
+      <view 
+        class="goods-item"
+        wx:key="id"
+        wx:for="{{item.kernelList}}"
+        wx:for-item="single"
+      >
+        <view id="{{single.item.itemId}}" bindtap="gotoGoodsInfo">
+          <image src="{{single.item.picUrl}}" class="single-img"></image>
+          <text class="single-title">{{single.item.title}}</text>
+          <text class="single-subTitle">{{single.item.subtitle}}</text>
+          <text class="single-origin-price">原价 : ¥{{single.item.priceYuanString}}</text>
+          <text class="single-price">抢购价 : ¥{{single.item.discountPriceYuanString}}</text>
+        </view>
+        <view data-itemid="{{single.item.itemId}}" data-skuid="{{single.item.sku}}" bindtap="{{single.item.inventory<=0||!single.item.itemSkuVOs[0].tagDetail.mayPlus? '':'appendItem'}}" class="{{single.item.inventory<=0||!single.item.itemSkuVOs[0].tagDetail.mayPlus?'single-cart single-cart-saleout':'single-cart'}}"></view>
+      </view>
+    </view>
+    <view 
+      wx:if="{{item.stepType==(25||13)}}" 
+      class="{{item.headSpace?'level-3 headSpace':'level-3'}}"
+      style="{{item.link?('background-color:'+item.link.url):''}}"
+    >
+      <view 
+        wx:key="id"
+        wx:for="{{item.items}}"
+        wx:for-item="levelA"
+        class="goods-levelA"
+      >        
+        <image id="{{levelA.itemId}}" src="{{levelA.picUrl}}" class="levelA-img" bindtap="gotoGoodsInfo"></image>
+        <view class="levelA-content">
+          <view id="{{levelA.itemId}}" class="levelA-title" bindtap="gotoGoodsInfo">{{levelA.title}}</view>
+          <view class="price-count">
+            <text class="levelA-price">¥{{levelA.discountPriceYuanString}}</text>
+            <text class="levelA-count">/{{levelA.itemSkuVOs[0].saleDetailInfo}}</text>
+          </view>
+          <view data-itemid="{{levelA.itemId}}" data-skuid="{{levelA.itemSkuVOs[0].skuId}}" class="{{levelA.itemSkuVOs[0].inventory<=0||!levelA.itemSkuVOs[0].tagDetail.mayPlus?'levelA-cart levelA-cart-saleout':'levelA-cart'}}" bindtap="{{levelA.itemSkuVOs[0].inventory<=0||!levelA.itemSkuVOs[0].tagDetail.mayPlus?'':'appendItem'}}">加入购物车</view>
+        </view>        
+      </view>
+    </view>
+    
+    <!-- <view wx:if="{{item.stepType==31}}" class="{{item.headSpace?'level-4 headSpace':'level-4'}}">
+      <view class="level-title">{{item.title}}</view>
+      <image hidden="{{item.picUrl!=null?false:true}}" src="{{item.picUrl}}" mode="widthFix" class="level-img"></image>
+    </view> -->
+    
+    <view wx:if="{{item.stepType==10}}" class="{{item.headSpace?'headSpace level-5':'level-5'}}">
+      <swiper 
+        class="swiper"
+        autoplay="true" 
+        interval="3000" 
+        duration="500"
+        circular="true"
+        indicator-dots="true"
+        indicator-color="#ffffff"
+        indicator-active-color="#76b357"
+      >
+        <swiper-item
+          wx:for="{{item.picList}}"
+          wx:for-item="swiperItem"
+          wx:key="id"
+        >
+          <image id="{{swiperItem.targetId}}" bindtap="gotoindex" src="{{swiperItem.picUrl}}" class="slide-image"/>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view> 
+</template>

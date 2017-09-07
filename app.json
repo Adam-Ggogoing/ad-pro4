@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index-activity/index-activity",
+    "pages/cart/cart",   
+    "pages/account-coupon/account-coupon",
+    "pages/search/search",
+    "pages/search-item/search-item",
+    "pages/account/account",
+    "pages/mine/mine",
+    "pages/mine-address-form/mine-address-form",
+    "pages/login/login",
+    "pages/mine-coupon/mine-coupon",
+    "pages/mine-address/mine-address",
+    "pages/goods-info/goods-info",
+    "pages/coupon-five/coupon-five",
+    "pages/mine-order/mine-order",
+    "pages/pay-suc/pay-suc"        
+  ],
+  "window": {
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "速懒鲜生",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh":false
+  },
+  "tabBar":{
+    "position":"bottom",
+    "borderStyle":"white",
+    "backgroundColor":"#fcfcfc",
+    "selectedColor":"#78b25c",
+    "list":[
+      {
+        "text":"首页",
+        "pagePath":"pages/index/index",
+        "iconPath":"./images/home-icon.png",
+        "selectedIconPath":"./images/home-icon-select.png"
+      },{
+        "text":"购物车",
+        "pagePath":"pages/cart/cart",
+        "iconPath": "./images/cart-icon.png",
+        "selectedIconPath":"./images/cart-icon-select.png"
+      },{
+        "text":"我的",
+        "pagePath":"pages/mine/mine",
+        "iconPath":"./images/user-icon.png",
+        "selectedIconPath":"./images/user-icon-select.png"
+      }
+    ]
+  },
+  "defined": {
+    "green": "#70aa52",
+    "grey": "#eee",
+    "normal": "28rpx"
+  }
+}

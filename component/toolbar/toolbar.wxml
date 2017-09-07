@@ -1,0 +1,35 @@
+<template name="t-toolbar">
+  <view class="toolbar">
+    <view class="toolbar-item toolbar-item__index">
+      <navigator hover-class="none" open-type="redirect" wx:if="{{name!='index'}}" url="/pages/index/index">
+        <view class="toolbar-logo toolbar-logo__index {{name==='index'?'toolbar-logo__index-select':''}}" />
+        <text class="toolbar-text {{name==='index'?'toolbar-text__select':''}}">首页</text>
+      </navigator>
+      <view wx:else>
+        <view class="toolbar-logo toolbar-logo__index {{name==='index'?'toolbar-logo__index-select':''}}" />
+        <text class="toolbar-text {{name==='index'?'toolbar-text__select':''}}">首页</text>
+      </view>
+    </view>
+    <view class="toolbar-item toolbar-item__cart">
+      <navigator hover-class="none" open-type="redirect" wx:if="{{name!='cart'}}" url="/pages/cart/cart">
+        <view class="toolbar-logo toolbar-logo__cart {{name==='cart'?'toolbar-logo__cart-select':''}}" />
+        <text class="toolbar-text {{name==='cart'?'toolbar-text__select':''}}">购物车</text>
+      </navigator>
+      <view wx:else>
+        <view class="toolbar-logo toolbar-logo__cart {{name==='cart'?'toolbar-logo__cart-select':''}}" />
+        <text class="toolbar-text {{name==='cart'?'toolbar-text__select':''}}">购物车</text>
+      </view>
+    </view>
+    <view class="toolbar-item toolbar-item__mine">
+      <navigator hover-class="none" open-type="redirect" wx:if="{{name!='mine'}}" url="/pages/mine/mine">
+        <view class="toolbar-logo toolbar-logo__mine {{name==='mine'?'toolbar-logo__mine-select':''}}" />
+        <text class="toolbar-text {{name==='mine'?'toolbar-text__select':''}}">我的</text>
+      </navigator>
+      <view wx:else>
+        <view class="toolbar-logo toolbar-logo__mine {{name==='mine'?'toolbar-logo__mine-select':''}}" />
+        <text class="toolbar-text {{name==='mine'?'toolbar-text__select':''}}">我的</text>
+      </view>
+    </view>
+  </view>
+  <view class="toolbar-wrap" />
+</template>

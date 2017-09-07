@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="empty" style="display:{{list.length===0?'block':'none'}}"/>
+  <view class="coupons" style="display:{{list.length!==0?'block':'none'}}">
+    <view 
+      class="coupon" 
+      wx:key="id" 
+      wx:for="{{list}}"
+      wx:for-item="item"
+      bindtap="selectCoupon"
+      data-item="{{item.id}}"
+    >
+      <view class="coupon-body">
+        <text class="coupon-price">¥ {{item.amountCent/100}}</text>
+        <text class="coupon-desc">满{{item.amountLimitYuanDescription}}可使用</text>
+      </view>  
+      <view class="coupon-footer">
+        <text class="coupon-expire">使用期限 : {{item.couponStartTimeStr}} - {{item.couponEndTimeStr}}</text>
+      </view>  
+    </view>  
+  </view>
+</view>

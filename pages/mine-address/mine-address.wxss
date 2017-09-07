@@ -1,0 +1,51 @@
+.address-add{
+  color:#70aa52;
+  text-align: center;
+  height:80rpx;
+  line-height: 80rpx;
+  border-top:30rpx solid #eee;
+  border-bottom:30rpx solid #eee;
+}
+.address-add-icon{
+  display: inline-block;
+  width:35rpx;
+  height:35rpx;
+  line-height:40rpx;
+  border-radius:50%;
+  border:1px solid #70aa52;
+  text-align: center; 
+  margin-right:15rpx;
+  vertical-align: middle;
+}
+.address-add-text{
+  font-size:28rpx;
+}
+
+.address-item{
+  border-bottom:1px solid #eee;
+  padding:10rpx 0;
+}
+.address-line{
+  font-size:28rpx;
+  color:#000;
+  line-height: 50rpx;
+  padding-left:30rpx;
+}
+.address-name{
+  display: inline-block;
+  min-width:150rpx;
+  margin-right:20rpx;
+}
+.address-home{
+  display: inline-block;
+  width:150rpx;
+}
+.address-home-square{
+  background-color:#70aa52;
+  color:#fff;
+  padding:5rpx 15rpx;
+  border-radius:10rpx;
+}
+.address-detail{
+  color:#666;
+}

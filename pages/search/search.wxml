@@ -1,0 +1,22 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+  <view class="header">
+    <input bindconfirm="inputSearch" auto-focus class="header-input" type="text" placeholder="搜索速懒鲜生商品"/>
+    <icon class="header-icon" type="search" size="24"/>
+    <text class="header-cancel">取消</text>
+  </view>  
+  <view class="body">
+    <text class="body-header">热门搜索</text>
+    <view class="body-words">
+      <text bindtap="gotoSearch" wx:key="{{item}}" wx:for="{{hotWords}}" data-item="{{item}}" wx-item="{{item}}">{{item}}</text>
+    </view>
+    <text class="body-header">历史搜索</text>
+    <view class="body-history">
+      <text bindtap="gotoSearch" wx:key="{{item}}" wx:for="{{history}}" data-item="{{item}}" wx-item="{{item}}">{{item}}</text>
+    </view>
+  </view>
+  <view class="bottom">
+    <text bindtap="clearHistory">清除历史搜索</text>    
+  </view>
+  <view class="bottom-place" />
+</view>

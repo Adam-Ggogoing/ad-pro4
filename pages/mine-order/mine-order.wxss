@@ -1,0 +1,133 @@
+.order-body{
+  background:#efefef;
+  overflow: scroll;
+  width: 100%;
+  font-family: SimSun,Microsoft YaHei,self-Serif;
+  font-size: 24rpx;
+}
+.order-nav{
+  position: fixed;
+  height:102rpx;
+  background: #fff;
+  z-index: 999;
+  line-height: 102rpx;
+  border-top:1rpx solid #E6E6E6;
+  border-bottom:8rpx solid #fff;
+  font-size: 32rpx;
+  color:#5c5c5c;
+}
+.order-nav .nav-text{
+  display: inline-block;
+  width:150rpx;
+  text-align: center;
+}
+.order-nav .nav-selected{
+  color: #76b357;
+  border-bottom:8rpx solid #76b357;
+}
+.order-info-top{
+  margin:120rpx 0 10rpx 0;
+}
+.order-info{
+  position:reative;
+  padding:38rpx;
+  margin-bottom: 10rpx;
+  background:#fff;
+}
+.order-header{
+  border-bottom:1rpx solid #E6E6E6;
+  height:94rpx;
+  line-height: 94rpx;
+  font-size: 26rpx;
+  position: relative;
+  color:#5c5c5c;
+}
+.order-header .order-statu{
+  position: absolute;
+  top:0;
+  right:0;
+  color: #76b357;
+}
+.order-item{
+  border-bottom:1rpx solid #E6E6E6;
+  position: relative;
+  display: block;
+  padding:38rpx 0;
+}
+.item-img{
+  width:170rpx;
+  height:170rpx;
+}
+.item-title{
+  color: #5c5c5c;
+  position: absolute;
+  top:38rpx;
+  left:190rpx;
+  padding-right:130rpx;
+}
+.item-price{
+  font-size: 26rpx;
+  color: #5c5c5c;
+  position: absolute;
+  top:38rpx;
+  right:0;
+}
+.item-origin-price{
+  color:#828281;
+  font-size: 26rpx;
+  position: absolute;
+  top:84rpx;
+  right:0;
+  text-decoration: line-through;
+}
+.item-spec{
+  color: #828281;
+  position: absolute;
+  bottom:90rpx;
+  left:190rpx;
+}
+.item-count-price{
+  color: #828281;
+  position: absolute;
+  bottom:38rpx;
+  left:190rpx;
+}
+.item-count-price text{
+  padding-right:20rpx; 
+}
+.order-info-bottom{
+  height: 110rpx;
+  position: relative;
+}
+.order-info-bottom .button{
+  width:140rpx;
+  height:50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 10rpx;
+  border:1rpx solid #76b357;
+}
+.order-info-bottom .order-payoff{
+  background:#76b357;
+  color: #fff;
+  position: absolute;
+  top:43rpx;
+  right:160rpx;
+}
+.order-info-bottom .order-payCancel{
+  color:#76b357;
+  position: absolute;
+  top:43rpx;
+  right:0;
+}
+.order-price{
+  color:#5c5c5c;
+  font-size: 32rpx;
+  position: absolute;
+  top:43rpx;
+  left:0;
+}
+.order-price text{
+  color:#ff4400;
+  font-size: 36rpx;
+}

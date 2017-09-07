@@ -1,0 +1,67 @@
+<view class="container">
+  <swiper class="swiper" indicator-dots="true" indicator-color="#5c5c5c" indicator-active-color="#76b357">
+    <swiper-item
+      wx:for="{{data.picList}}"
+      wx:for-item="item"
+      wx:key="id1"
+    >
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </swiper>
+  <view class="goods-info">
+    <view class="goods-title">{{data.title}}</view>
+    <view class="goods-subTitle">
+      <text wx:if="{{data.subtitle?true:false}}">{{data.subtitle}}</text>
+      <text wx:if="{{data.itemSkuVOs[0].inventory>0&&data.itemSkuVOs[0].tagDetail.mayPlus&&data.itemSkuVOs[0].tagDetail.tagContent?true:false}}" class="tag-content">{{data.itemSkuVOs[0].tagDetail.tagContent}}</text>
+      <text wx:if="{{!(data.itemSkuVOs[0].inventory>0&&data.itemSkuVOs[0].tagDetail.mayPlus)}}" class="tag-content-saleout">卖完啦</text>
+    </view>
+    <text class="goods-price">¥{{data.itemSkuVOs[0].discountPriceYuanString}}</text>
+    <text class="goods-originPrice">¥{{data.itemSkuVOs[0].priceYuanString}}</text>
+  </view>
+  <view class="goods-info-bottom">
+    <text class="goods-dispat">{{data.itemSkuVOs[0].serviceInfo}}</text>
+    <text class="goods-saleDetailInfo">规格：{{data.itemSkuVOs[0].saleDetailInfo}}</text>
+    <text class="goods-originplace">产地：{{data.itemSkuVOs[0].originplace}}</text>
+  </view>
+  <view wx:if="{{data.itemSkuVOs[0].promotionInfo?true:false}}" class="goods-info-discount">
+    <text class="discount-icon">优惠</text>
+    <text class="discount-text">{{data.itemSkuVOs[0].promotionInfo}}</text>
+  </view>
+  <view wx:if="{{recommand[0]?true:false}}" class="recommand"><view class="icon" ></view> <text class="recom-text">为您推荐</text></view>
+  <scroll-view wx:if="{{recommand[0]?true:false}}" scroll-x class="horizon-scroll">
+    <view 
+      class="hot-goods-content"
+      wx:for="{{recommand}}"
+      wx:for-item="item"
+      wx:key="id2"
+    >
+      <view id="{{item.itemId}}" bindtap="gotoGoodsInfo">
+        <image class="itemPic" src="{{item.picUrl}}"></image>
+        <text class="title">{{item.title}}</text>
+        <view class="price">
+          <text>¥{{item.itemSkuVOs[0].priceYuanString}}</text>
+          <text class="saleDetail">/{{item.itemSkuVOs[0].saleDetailInfo}}</text>
+        </view>
+      </view>
+      <view data-itemid="{{item.itemId}}" data-skuid="{{item.itemSkuVOs[0].skuId}}" bindtap="{{item.inventory>0&&item.itemSkuVOs[0].tagDetail.mayPlus?'appendItem':''}}" class="{{item.inventory>0&&item.itemSkuVOs[0].tagDetail.mayPlus?'addCart':'addCart addCart-saleout'}}"></view>
+    </view>
+  </scroll-view>
+  <view wx:if="{{detailList[0]?true:false}}">
+    <view
+      wx:for="{{detailList}}"
+      wx:for-item="item"
+      wx:key="id13"
+      style="display:block"
+    >
+      <image mode="widthFix" src="{{item.source}}" style="width:100%;display:block"></image>
+    </view>  
+  </view>
+<view class="buy-cart-wrap"></view>   
+<view class="buy-cart">
+  <text class="cart-icon" bindtap="gotoCart"></text>
+  <view wx:if="{{count?true:false}}">
+    <text class="cart-tag">{{count}}</text>
+  </view>
+  <text class="{{data.itemSkuVOs[0].inventory>0&&data.itemSkuVOs[0].tagDetail.mayPlus?'cart-text':'cart-text-saleout cart-text'}}" data-itemid="{{data.itemId}}" data-skuid="{{data.itemSkuVOs[0].skuId}}" bindtap="{{data.itemSkuVOs[0].inventory>0&&data.itemSkuVOs[0].tagDetail.mayPlus?'appendItem':''}}" >加入购物车</text>
+</view>
+</view> 

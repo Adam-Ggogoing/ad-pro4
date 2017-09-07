@@ -1,0 +1,53 @@
+<view class="order-body">  
+  <view class="order-nav">
+    <text id="1" bindtap="navSelect" class="{{selected!=1?'nav-text':'nav-text nav-selected'}}">全部</text>
+    <text id="2" bindtap="navSelect" class="{{selected!=2?'nav-text':'nav-text nav-selected'}}">待付款</text>
+    <text id="3" bindtap="navSelect" class="{{selected!=3?'nav-text':'nav-text nav-selected'}}">待配送</text>
+    <text id="4" bindtap="navSelect" class="{{selected!=4?'nav-text':'nav-text nav-selected'}}">配送中</text>
+    <text id="5" bindtap="navSelect" class="{{selected!=5?'nav-text':'nav-text nav-selected'}}">退款</text>
+  </view>
+  <view class="order-info-top"></view>
+  <view 
+    class="order-info"
+    wx:key="id"
+    wx:for="{{orderList}}"
+    wx:for-item="list"
+  >
+    <view class="order-header">
+      <text class="order-timeshow">{{list.gmtCreate}}</text>
+      <text class="order-statu">{{list.statusString}}</text>
+    </view>
+    <view class="order-content">
+      <view>
+        <a 
+          class="order-item"
+          id="{{list.id}}"
+          href="../order-detail/order-detail"
+          wx:for="{{list.items}}"
+          wx:for-item="item"
+          wx:key="id"
+        >
+          <image class="item-img" src="{{item.iconUrl}}" id="{{item.id}}" bindtap="gotoGoodsInfo"/>
+          <text class="item-title">{{item.name}}</text>
+          <text class="item-price">¥{{item.effeAmount}}</text>
+          <text wx:if="{{item.price}}" class="item-origin-price">¥{{item.price}}</text>
+          <view class="item-spec">规格:{{item.skuInfo.spec}}</view>
+          <view class="item-count-price">
+            <text>单价:¥{{item.effePrice}}</text>
+            <text>数量:{{item.count}}</text>
+          </view>
+        </a>
+      </view>
+    </view>
+    <view class="order-info-bottom">
+      <text 
+        data-id="{{list.id}}"
+        wx:if="{{list.status!==2||!list.timeOff?false:true}}" 
+        class="order-payoff button" 
+        bindtap="gotoPayoff"
+      >去支付</text>
+      <text id="{{list.id}}" wx:if="{{list.status!==2?false:true}}" class="order-payCancel button" bindtap="gotopayCancel">取消订单</text>
+      <text class="order-price">合计: <text>¥{{list.effeAmount<0?'0.00':list.effeAmount}}</text></text>
+    </view>
+  </view>
+</view>

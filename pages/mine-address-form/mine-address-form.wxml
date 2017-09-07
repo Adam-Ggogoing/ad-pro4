@@ -1,0 +1,46 @@
+<!--pages/mine-address-form/mine-address-form.wxml-->
+<view class="container">
+  <view class="address-div">
+    <view class="address-p">
+      <view class="address-label">收货地址</view>
+      <text bindtap="choseLocation" class='{{"address-input "+(!address&&"address-code")}}'>{{address||'小区／写字楼／学校等'}}</text>
+    </view>
+    <view class="address-p">
+      <view class="address-label"> </view>
+      <input 
+        bindinput="changeAddressDetail" 
+        value="{{addressDetail}}"
+        class="address-input" 
+        placeholder="具体信息（如楼号／楼层／房号）" 
+      />
+    </view>
+  </view>
+  <view class="address-div">
+    <view class="address-p">
+      <view class="address-label">联系人</view>
+      <input value="{{name}}" bindinput="changeName" class="address-input" placeholder="输入联系人"/>
+    </view>
+    <view class="address-p">
+      <view class="address-label">手机号</view>
+      <input 
+        bindinput="changePhone" 
+        type="number"  
+        value="{{phone}}" 
+        class="address-input" 
+        maxlength="11"
+        placeholder="输入手机号" 
+      />
+    </view>
+  </view>
+  <view class="address-div">
+    <view class="address-p">
+      <view class="address-label">标签</view>
+      <view class="address-input">
+        <text>家里</text><icon bindtap="setHomeAddress" type="success" color='{{isHomeAddress?"green":"#ddd"}}'/>
+        <text>公司</text><icon bindtap="setCompanyAddress" type="success" color='{{!isHomeAddress?"green":"#ddd"}}'/>
+      </view>
+    </view>
+  </view>
+  <button bindtap="submit" type="primary" class="address-button">确定</button>
+  <button wx:if="{{uid}}" bindtap="del" type="default" class="address-button address-button-del">删除</button>
+</view>

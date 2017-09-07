@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="header">
+    <view class="header-cover" />
+    <view 
+      class="header-container__nologin" 
+      style="display:{{user===null?'block':'none'}}"
+    >
+       <image class="header-logo" src="https://h5.xianzaishi.com//upload_bbe10b5e9cb9ff93624496864de78412.png"/>
+       <text bindtap="login" class="header-text">登陆</text>
+    </view>
+    <view 
+      style="display:{{user!==null?'block':'none'}}"
+      class="header-container__login"
+    >
+      <image class="header-logo__login" src="https://h5.xianzaishi.com//upload_f17bd185b054793d262d7d9b373778a1.png" />
+      <view class="header-info">
+        <text class="header-phone">{{user&&user.phone}}</text>
+        <text class="header-credit">鲜在时积分 : {{user&&user.credit}}</text>
+      </view>  
+    </view>
+  </view>
+  <view class="body">
+    <view class="body-item" bindtap="gotoCoupon">
+      <view class="body-icon body-icon__coupon" />
+      <text class="body-icon-text">我的优惠卷</text>
+      <view class="body-arrow"/>
+    </view> 
+    <view class="body-item" bindtap="gotoOrder">
+      <view class="body-icon body-icon__order" />
+      <text class="body-icon-text">我的订单</text>
+      <view class="body-arrow"/>
+    </view>   
+    <view class="body-item" bindtap="gotoAddress">
+      <view class="body-icon body-icon__address" />
+      <text class="body-icon-text">我的收货地址</text>
+      <view class="body-arrow"/>
+    </view>
+  </view>
+</view>
+<view class="bottom-border" />

@@ -1,0 +1,4 @@
+<!--pages/pay/pay.wxml-->
+<view class="container">
+  <view class="pay">订单创建成功，30分钟内支付有效，正在唤起支付。</view>
+</view>

@@ -1,0 +1,71 @@
+@import "../../component/pit-1/pit-1.wxss";
+
+.container{
+  background-color:#eee;
+}
+.header{
+  background-color:#fff;
+  border-bottom:1px solid #ddd;
+  border-top:1px solid #fff;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  z-index:1;
+}
+.header-place{
+  height:105rpx;
+}
+.header-input{
+  height:75rpx;
+  line-height:85rpx;
+  font-size:28rpx;
+  background-color:#eee;
+  display: inline-block;
+  vertical-align: middle;
+  margin:15rpx 0 15rpx 20rpx;
+  border-radius:15rpx;
+  width:520rpx; 
+  padding-left:75rpx;
+}
+.header-icon{
+  position:absolute;
+  left:35rpx;
+  top:30rpx;
+}
+.header-cart{
+  width:75rpx;
+  height:75rpx;
+  position:absolute;
+  right: 35rpx;
+  top:15rpx;
+  color:#70aa52;
+  background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowMzc5RTBFOTU3NzQxMUU2QTAxMTlEN0I5NTMyOUEzRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowMzc5RTBFQTU3NzQxMUU2QTAxMTlEN0I5NTMyOUEzRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjAzNzlFMEU3NTc3NDExRTZBMDExOUQ3Qjk1MzI5QTNFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjAzNzlFMEU4NTc3NDExRTZBMDExOUQ3Qjk1MzI5QTNFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+bbRMVgAABMJJREFUeNrsmlloFFkUhm9inLTGmLgkRodxX0ZwwdHZlImgg4KKuKAyiuDog6D4IoIPMw8+DSP4MEgYZkGcVRQZcAF18EXjvuCGGzoal7hnaU1iFjWZ/9B/4fVOV7qqqzpdKefAR53qSrrrv33qnnPP7YyWlhYVZst4KwQWFxeHUlxpaanK1M7HgjLwG5gq4sMgUhdYAPqDxWAfOAzeD5PA3sa18eAkmBgWgb+DD0EJaOJruWAnGBYGgS/BabAKfAzu8/U88HMYBOp2DkwDjTz/jKJDI1DsPNiknX/RHgVmJbi+FaygPykFn5/Le+jG83dATpy/i4JmHqv9FHhG8wfb3GAhU0wPkO8QEdHJw8A8ALfAZXAA7AC1yQisAw0gwhv6G/QCPUl2miKvN/kULAOVYDY45Fag4kQToT/F5xut5wA+A6/4moTiU5tQ7sxwNgdWouc7VmOuBdYwVdhdewgqwBM+H9Xas6If63h8TlFRDwMj0TOIM/s3DPkPmMdPuRVYp/nLWd1YghrTFKIV5AQYDZby9VmmwEwHb9ag+aeYI8vTKM60vzR/ops8qIehZTkBTHXHgbWoHQc6uBVYr/mdAyiwCtylL5PPe24F6qHYSQXTbmn+ILcCnwU8RJW2MLBSRtIh2iWgAqN29+hWYCSgAps1P9utwNqATzLK6B/VenkG8wIqsMCmMHH9DXYNqEB95izzkuiDKFCiahT9F+CKW4HVARe4UqteDhulpaNiO2oT6+kymeg+Yp9outEr+iWZ5VKl5ndvQyH57CIMBMPBCDLY5r5lZbElGYGPjXWYH5bJzkAf1o59QT/6/SjK6WfJsknamutVrPXpWmAF/zGLZVC2zVIpwhAuYJ+mp0YhBRWBd+lnJTk4UnicZXtiPzgYT5gbgc0UWcRzucGbXGj+qDWd/C7jZBBvgGvgOrgILoBLnC0dmdNRvBNHYAeVfDNY1m+PwD0WyrLcecCjvPYPP7PZ6yg5FVjGmUtsKMPD7E++5DddSay2hnW8z5svp5gXbTFTORV4VfOH8CijPV4TEFUBNKcCz2r+OO0bO6YCbpkO/+605n/iYQYMrMB7Wo0nq/rP24tAN9+EtOe+pr8RrGP1cLu1POSDdWQKko52Lo/dWFVZyE7YVq8CfwJrmNBlovlTexbLOXNGuX6sVzabIUZNmc0oymPa6cp7yqXfxWEX4Q8/BMqsuQRsVm921+Q9+pN0WS8/QlRsm4ptVy1QsS7yaNaOqZx0GhkVNcy9cqxSr/dBqow05kmgYgWykVgTVRFHMZ/hFaFvZ01aa+EVBTQwtGtYBFgbNk1tNcm01g+ZQYFSO+5y8Py5MdkxWsuyUMTvVbEdpcq2ELiIBXeOkVLmcob1ajPBdhXb2rZM1oay2TmBJZ8vedBuZH9V/+12SzG+W73ed0/WZAbdZIizbADY4Geij2erlbGTY4Ttlx4FTkqw6J3DHJkygaMSXB/pUWBhgusRJ2tQLwKrPV53s4KJZw+dfIYXgTs8Xk9kR4wi37SSVD+DJa0sl6QJVOpRoKz656vYb2FMk8nt21SnCUnMk8FXYKGK/W5FWg3fgx98yoHSSRgD5nHWlvy6Bxx1+gah/0lzxv+/um/n9q8AAwDwjxf7qm/NrgAAAABJRU5ErkJggg==);
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.header-cart text{
+  position:absolute;
+  width:40rpx;
+  height:40rpx;
+  line-height:45rpx;
+  text-align:center;
+  background-color:#70aa52;
+  color:#fff;
+  font-size:25rpx;
+  border-radius:50%;
+  right:0;
+  top:0;
+}
+.body{
+  background-color:#fff;
+  border-top:1rpx solid #fff;
+}
+.body-empty{
+  text-align:center;
+  font-size:35rpx;
+  margin-top:250rpx;
+}
+.body-empty .body-empty-keyword{
+  color:#70aa52;
+}

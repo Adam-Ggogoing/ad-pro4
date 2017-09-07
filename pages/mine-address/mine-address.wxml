@@ -1,0 +1,28 @@
+<view>
+  <view bindtap="addAddress" class="address-add">
+    <view class="address-add-icon">+</view>
+    <text class="address-add-text">添加新收货地址</text>
+  </view>
+  <view>
+    <view class="address-list">
+      <view 
+        bindtap="gotoForm" 
+        class="address-item" 
+        wx:key="item" 
+        wx:for="{{addressList}}"
+        data-address="{{item}}"
+      >
+        <view class="address-line">
+          <text class="address-name">{{item.name}}</text>
+          <text class="address-phone">{{item.phone}}</text>
+        </view>
+        <view class="address-line">
+          <text class="address-home">
+            <text class="address-home-square">{{item.isHomeAddress?'家里':'公司'}}</text>
+          </text>
+          <text class="address-detail">{{item.address}}{{item.addressDetail}}</text>
+        </view>
+      </view>    
+    </view>
+  </view>
+</view>

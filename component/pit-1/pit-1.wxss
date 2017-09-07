@@ -1,0 +1,47 @@
+.pit-1{
+  height:250rpx; 
+  border-bottom:1px solid #eee; 
+  position:relative;
+}
+.pit-1-image{
+  width:150rpx;
+  height:150rpx;
+  margin:50rpx;
+  float:left;
+}
+.pit-1-title{
+  font-size:30rpx;
+  margin-top:50rpx;
+  line-height:1.5em;
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.pit-1-subtitle{
+  font-size:28rpx;
+  line-height:2em;
+  color:#666;
+}
+.pit-1-info{
+  font-size:28rpx;
+  line-height: 2em;
+  color:#666;
+}
+.pit-1-price{
+  font-size:30rpx;
+  line-height:2em;
+  color:#70aa52;
+}
+.pit-1-cart{
+  background-image:url(http://h5.xianzaishi.com//upload_e545c107ae0f468e5ad8f086ec903d9a.png);
+  background-repeat: no-repeat;
+  background-color:#7ab55b;
+  width:80rpx;
+  height:80rpx;
+  bottom:40rpx;
+  right:40rpx;
+  position:absolute;
+  background-size:50%;
+  background-position:center;
+  border-radius:50%;
+}

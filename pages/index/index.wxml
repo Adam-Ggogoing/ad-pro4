@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<import src="../../component/floors/floors.wxml" />
+<view class="container">
+  <view class="searchBox">
+    <input placeholder-style="font-size:31rpx;font-family: SimSun,Microsoft YaHei,self-Serif;" bindconfirm="gotoSearch" placeholder="三文鱼" type="text" class="search" bindinput="search"/>
+    <icon bindtap="gotoSearch" class="search-icon" type="search" size="24"/>
+  </view>
+  <view style="height:110rpx"></view>
+  <template is="t-floor" data="{{list,timeEnd}}"></template>
+</view>
+<view class="bottom-border"/>

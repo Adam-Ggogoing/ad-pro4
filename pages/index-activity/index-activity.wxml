@@ -1,0 +1,5 @@
+<import src="../../component/floors/floors.wxml" />
+
+<view class="container">
+  <template is="t-floor" data="{{list,timeEnd}}"></template>
+</view>

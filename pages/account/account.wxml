@@ -1,0 +1,73 @@
+<!--pages/account/account.wxml-->
+<view class="container">
+  <view bindtap="selectAddress" wx:if="{{address!==null}}" class="address">
+    <view class="arrow"/>  
+    <view class="address-p">
+      <view class="address-span">{{address.name}}</view>
+      <view class="address-span">{{address.phone}}</view>
+    </view>
+    <view class="address-p">{{address.address+address.addressDetail}}</view>  
+  </view>
+  <view bindtap="selectAddress" wx:if="{{address===null}}" class="address">
+    <view class="arrow" />
+    <view class="address-empty">点击此处填写您的收货信息</view>
+  </view>
+  <view class="goods">
+    <view class="goods-tip">
+      <text class="goods-tip-header">已享优惠</text>
+      <text>{{discountInfos}}</text>
+    </view>    
+    <view class="goods-list">
+      <view class="goods-item" wx:for="{{objects}}" wx:key="object" wx:for-item="object">
+        <image src="{{object.itemIconUrl}}" />
+        <text class="goods-item-name">{{object.itemName}}</text>
+        <text class="goods-item-price">¥{{object.itemEffePrice}}</text>
+        <text class="goods-item-count">X {{object.itemCount}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="arrive-time">
+    <view class="arrive-line">
+      <view class="arrive-left">期望送达时间</view>  
+      <picker class="arrive-right" wx:if="{{rangeTime.length>0}}" bindcolumnchange="bindcolumnchange" bindchange="bindMultiPickerChange" mode="multiSelector" index="{{multiIndex}}" range="{{multiArray}}">
+        <view class="arrive-view">{{dayRange[dayValue]}}{{timeValue}}</view> 
+      </picker>
+      <view class="arrow"/>  
+    </view>
+    <view class="arrive-line">
+      <view class="arrive-left">优惠</view>
+      <view class="arrive-right" bindtap="selectCoupon"><view class="arrive-coupon">{{couponList.length}}</view></view>
+      <view class="arrow" />
+    </view>
+  </view>
+  <view class="arrive-time">
+    <view class="arrive-line">
+      <input value="{{description}}" bindinput="bindDescription" class="account-memo" type="text" placeholder="若您对订单有特殊要求，请在此备注"/>    
+    </view>
+  </view>
+  <view class="arrive-time">
+    <view class="arrive-line">
+      <view class="arrive-left">商品总价</view>
+      <view class="arrive-right arrive-right__bottom">¥ {{currPrice}}</view>
+    </view>
+    <view class="arrive-line">
+      <view class="arrive-left">运费</view>
+      <view class="arrive-right arrive-right__bottom">¥ {{freight}}</view>
+    </view>
+    <view wx:if="{{coupon!=null}}" class="arrive-line">
+      <view class="arrive-left">{{coupon.couponTitle}}</view>
+      <view class="arrive-right arrive-right__bottom">-¥ {{coupon.amountYuanDescription}}</view>
+    </view>
+  </view>
+
+  <view class="account-bottom">
+    <view class="account-bottom-total">
+      <text>合计 : </text>
+      <text>{{totalPriceShow}}</text>
+    </view>
+    <view bindtap="submit" wx:if="{{!isSubmit}}" class="account-bottom-btn">提交订单</view>
+    <view wx:if="{{isSubmit}}" class="account-bottom-btn">正在提交</view>
+  </view>
+  <view class="account-bottom__place" />
+
+</view>

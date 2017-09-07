@@ -1,0 +1,90 @@
+.container{
+  background-color:#fafafa;
+}
+.header{
+  background-color:#fff;
+  border-bottom:1px solid #ddd;
+  border-top:1px solid #fff;
+  position:relative;
+}
+.header-input{
+  height:75rpx;
+  line-height:85rpx;
+  font-size:28rpx;
+  background-color:#eee;
+  display: inline-block;
+  vertical-align: middle;
+  margin:15rpx 0 15rpx 20rpx;
+  border-radius:15rpx;
+  width:520rpx; 
+  padding-left:75rpx;
+}
+.header-icon{
+  position:absolute;
+  left:35rpx;
+  top:30rpx;
+}
+.header-cancel{
+  font-size:35rpx;
+  position:absolute;
+  right: 35rpx;
+  top:30rpx;
+  color:#70aa52;
+}
+.body{
+  padding:20rpx 0 0 0rpx;
+}
+.body-header{
+  font-size:30rpx;
+  margin-top:20rpx;
+  line-height:75rpx;
+  padding-left:20rpx;
+}
+.body-words text{
+  display:inline-block;
+  width:140rpx;
+  margin:25rpx 50rpx;
+  height:60rpx;
+  line-height:60rpx;
+  overflow:auto;
+  background-color:#f2fdec;
+  font-size:28rpx;
+  text-align:center;
+  color:#7ab55b;
+}
+.body-history{
+  height:320rpx;
+  overflow: auto;
+}
+.body-history text{
+  padding-left:20rpx;
+  font-size:28rpx;
+  line-height:70rpx;
+  display:block;
+  white-space: nowrap;
+}
+.bottom{
+  position: fixed;
+  width:100%;
+  left:0;
+  bottom:0;
+  height:120rpx;
+  background-color:#eee;
+}
+.bottom text{
+  display: block;
+  height:70rpx;
+  line-height:70rpx;
+  text-align:center;
+  border-radius:35rpx;
+  margin:25rpx auto 0;
+  width:250rpx;
+  background-color:#fafafa;
+  font-size:28rpx;
+  box-shadow:0 2rpx 4rpx rgba(0,0,0,.3);
+  color:#666;
+}
+.bottom-place{
+  height:120rpx;
+  width:100%;
+} 

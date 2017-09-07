@@ -1,0 +1,8 @@
+.pay{
+  color:#78b25d;
+  background-color:#fff;
+  text-indent: 1em;
+  line-height: 70rpx;
+  font-size:28rpx;
+}
+

@@ -1,0 +1,43 @@
+<view class="container">
+  <view class="coup-tab">
+    <text id="1" class="{{selectedId==1? 'selected tab-item':'tab-item'}}" bindtap="tabSelect">未使用</text>
+    <text id="3" class="{{selectedId==3? 'selected tab-item':'tab-item'}}" bindtap="tabSelect">已使用</text>
+    <text id="2" class="{{selectedId==2? 'selected tab-item':'tab-item'}}" bindtap="tabSelect">已过期</text>
+  </view>
+  <view class="searchBox">
+    <input class="search-input" placeholder="请输入优惠码" bindinput="search"/>
+    <text class="{{hadInput?'search-btn inputed':'search-btn'}}" bindtap="getNewcoupon">兑换</text>
+  </view>
+  <view wx:if="{{list.length<1}}" class="empty">暂无优惠券</view>
+  <view wx:else class="coupons">
+    <view 
+      class="coupon" 
+      wx:key="id" 
+      wx:for="{{list}}"
+      wx:for-item="item"
+    >
+        <view class="{{selectedId!=1? 'overdue-coupon-body':item.couponClass}}">
+          <text class="coupon-price">{{item.couponTitle}}</text>
+          <text class="coupon-expire">使用期限 : {{item.couponStartTime}} __ {{item.couponEndTime}}</text>
+        </view> 
+        <view class="{{item.overRule?'footer':'coupon-footer'}}">
+          <text wx:if="{{!item.overRule}}" class="footer-text">{{item.amountLimitYuanDescription}}</text>
+          <view wx:else>
+            <view wx:if="{{!item.openTextFlag}}" class="close" id="{{item.id}}"  bindtap="openText">
+              <text class="close-text check-on">点此查看使用规则</text>
+              <text class="close-icon icon-on"></text>
+            </view>
+            <view wx:else>
+              <view class="desc-content">
+                <text class="close-text">{{item.description}}</text>
+              </view>
+              <view class="close"  id="{{item.id}}" bindtap="openText">
+                <text class="close-text checkp-off">收起 </text>
+                <text class="close-icon icon-off"></text>
+              </view>
+            </view>
+          </view>
+        </view> 
+    </view>
+  </view>
+</view>

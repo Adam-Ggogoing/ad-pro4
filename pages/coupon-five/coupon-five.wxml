@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="coupon" bindtap="getcoupon">
+    <image mode="widthFix" src="https://h5.xianzaishi.com//upload_c09775f2740e1d8653cbe3b1288a3a6e.jpeg" style="width:100%;height:190rpx"></image>
+  </view>
+</view>
